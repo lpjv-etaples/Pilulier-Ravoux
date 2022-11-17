@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+    </head>
+
+    <body style="margin: 0; overflow: hidden;">
+        <a-scene
+            vr-mode-ui="enabled: false;"
+            loading-screen="enabled: false;"
+            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+            id="scene"
+            embedded
+            gesture-detector
+        >
+            <a-marker
+                id="animated-marker"
+                type="pattern"
+                preset="custom"
+                url="./documents/assets/marker-m1.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerA"
+            >
+                <a-image
+                    src="./documents/assets/asset-m1.png"
+                    scale="6.5 4.5 4.5"
+                    class="clickable"
+                    rotation="-90 0 0"
+                    gesture-handler
+                ></a-image>
+            </a-marker>
+            
+             <a-marker
+                id="animated-marker"
+                type="pattern"
+                preset="custom"
+                url="./documents/assets/marker-m2.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerA"
+            >
+                <a-image
+                    src="./documents/assets/asset-m2.png"
+                    scale="6.5 4.5 4.5"
+                    class="clickable"
+                    rotation="-90 0 0"
+                    gesture-handler
+                ></a-image>
+            </a-marker>
+            
+             <a-marker
+                id="animated-marker"
+                type="pattern"
+                preset="custom"
+                url="./documents/assets/marker-m3.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerA"
+            >
+                <a-image
+                    src="./documents/assets/asset-m3.png"
+                    scale="6.5 4.5 4.5"
+                    class="clickable"
+                    rotation="-90 0 0"
+                    gesture-handler
+                ></a-image>
+            </a-marker>
+
+            <a-entity camera></a-entity>
+        </a-scene>
+    </body>
+</html>
