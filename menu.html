@@ -13,8 +13,10 @@
  
     <style>
       a-scene {
-        height: 100px;
-        width: 40%;
+        width: 50vw;
+        height: 50vh;
+        margin-top: 25vh;
+        margin-left: 25vw;
       }
     </style>
   </head>
@@ -28,10 +30,9 @@
             id="scene"
             gesture-detector-->
 
-     <a-scene 
+     <a-scene embedded="true">
            
-            embedded
-        >
+           
             <a-marker
                 id="animated-marker"
                 type="pattern"
